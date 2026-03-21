@@ -1,16 +1,15 @@
 pipeline {
     agent any
     environment{
-        Project= "Jenkins"
+        My_Project= "Jenkins"
     }
-
     stages {
         stage('Build') {
             steps {
                 script {
                     sh"""
                        echo 'Building application...'
-                       echo $Project
+                       echo $My_Project
                     """
                 }
             }
