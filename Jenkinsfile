@@ -24,6 +24,7 @@ pipeline {
     post {
         always {
             echo 'Pipeline finished.'
+            cleanWs() 
         }
         success {
             echo 'Success! Sending notification...'
