@@ -4,31 +4,19 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                script {
-                    sh"""
-                       echo 'Building application...'
-                    """
-                }
+                echo 'Building application...'
             }
         }
 
         stage('Test') {
             steps {
-                script {
-                    sh"""
-                       echo 'Testing application...'
-                    """
-                }
+                echo 'Running tests...'
             }
         }
 
         stage('Deploy') {
             steps {
-                script {
-                    sh"""
-                       echo 'deploying application...'
-                    """
-                }
+                echo 'Deploying to server...'
             }
         }
     }
