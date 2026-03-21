@@ -3,6 +3,8 @@ pipeline {
     environment{
         My_Project= "Jenkins"
     }
+    options {
+        timeout(time: 10, unit: 'SECONDS')
     stages {
         stage('Build') {
             steps {
@@ -10,6 +12,7 @@ pipeline {
                     sh"""
                        echo 'Building application...'
                        echo $My_Project
+                       sleep 12
                     """
                 }
             }
