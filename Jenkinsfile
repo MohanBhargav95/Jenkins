@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment{
+        Project= "Jenkins"
+    }
 
     stages {
         stage('Build') {
@@ -7,6 +10,7 @@ pipeline {
                 script {
                     sh"""
                        echo 'Building application...'
+                       echo $Project
                     """
                 }
             }
